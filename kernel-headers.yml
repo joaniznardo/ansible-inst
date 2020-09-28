@@ -1,0 +1,16 @@
+---
+- hosts: pau
+  gather_facts: yes
+  become: yes
+  tasks:
+    - name: attempt to install kernel support packages for current version
+      package:
+        name: "{{ item }}"
+      with_items:
+        - "kernel-headers"
+        - "kernel-tools"
+        - "kernel-tools-libs"
+        - "kernel-devel"
+        - "kernel-debug-devel"
+        - "gcc"
+        - "make"
