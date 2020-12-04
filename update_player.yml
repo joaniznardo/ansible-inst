@@ -1,0 +1,9 @@
+---
+- hosts: pau
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: actualitza VMware Player
+      shell:  
+        cmd: /usr/bin/vmware-modconfig --console --install-all
+
