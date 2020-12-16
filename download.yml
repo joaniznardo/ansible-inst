@@ -1,0 +1,22 @@
+---
+- hosts: pau
+  gather_facts: no
+  become: yes
+  tasks:
+##    - name: Copia vmware a /tmp
+##      copy:
+##        dest: /tmp/VMware-Player-16.0.0-16894299.x86_64.bundle
+##        src: tmp/VMware-Player-16.0.0-16894299.x86_64.bundle
+##        owner: root
+##        group: root
+##        mode: 0644
+    - name: descarrega VMware Player
+      get_url:
+        url: https://download3.vmware.com/software/player/file/VMware-Player-16.0.0-16894299.x86_64.bundle
+        dest: /tmp/VMware-Player-16.0.0-16894299.x86_64.bundle2
+        mode: '0755'
+        force_basic_auth: yes
+
+    - name: instal·la no interactiu
+      command: sh /tmp/VMware-Player-16.0.0-16894299.x86_64.bundle2 --deferred-gtk
+
