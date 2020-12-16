@@ -1,0 +1,19 @@
+---
+- hosts: pau
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Give insecure permissions to an existing file
+      file:
+        path: /etc/skel/.vmware
+        state: directory
+        mode: '0770'        
+        owner: root
+        group: root
+    - name: vmware preferences
+      copy:
+        dest: /etc/skel/.vmware/preferences
+        src: etc/skel/.vmware/preferences
+        owner: root
+        group: root
+        mode: 0644
