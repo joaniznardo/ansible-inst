@@ -1,0 +1,12 @@
+---
+- hosts: pau
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: descarrega VMware Player
+      get_url:
+        url: https://informatica.uv.es/~carlos/ns/netinvm/netinvm-kvm_2020-07-15_vmware.zip 
+        dest: /opt/netinvm-kvm_2020-07-15_vmware.zip 
+        mode: '0755'
+        force_basic_auth: yes
+

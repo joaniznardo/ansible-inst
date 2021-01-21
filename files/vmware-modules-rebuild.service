@@ -1,0 +1,13 @@
+[Unit]
+Description=Recompiles vmware modules
+Requires=vmware.service
+Before=vmware.service
+ConditionPathExists=!/dev/vmmon
+
+[Service]
+Type=oneshot
+ExecStart=vmware-modconfig --console --install-all
+
+[Install]
+WantedBy=multi-user.target
+
