@@ -1,0 +1,20 @@
+---
+- hosts: pau
+  gather_facts: no
+  become: yes
+  serial: 1
+  tasks:
+##    - name: Copia vmware a /tmp
+##      copy:
+##        dest: /tmp/VMware-Player-16.0.0-16894299.x86_64.bundle
+##        src: tmp/VMware-Player-16.0.0-16894299.x86_64.bundle
+##        owner: root
+##        group: root
+##        mode: 0644
+    - name: descarrega iso
+      get_url:
+        url: https://informatica.uv.es/~carlos/ns/netinvm/netinvm-kvm_2020-07-15_vmware.zip
+        dest: /opt/netinvm-kvm_2020-07-15_vmware.zip
+        mode: '0755'
+        force_basic_auth: yes
+
