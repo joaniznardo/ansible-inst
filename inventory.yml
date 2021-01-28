@@ -6,32 +6,57 @@ all:
           ansible_host: 192.168.1.83
         fahad: 
           ansible_host: 192.168.1.86 # fahad
-#        josep: 192.168.1.91 # josep
-#        martha: 192.168.0.134 #martha
-#        carlos: 192.168.1.90 # carlos
-#        desconegut1: 192.168.1.84 
-#        marc: 192.168.1.93 # marc
-#        albert: 192.168.1.89 # albert
-#        christopher: 192.168.1.81 #christopher
-#        rodrigo: 192.168.1.94 # rodrigo
-#        oriana: 192.168.1.96 # oriana
-#        desconegut2: 192.168.0.135
-#    a14:
-#      hosts: 
-#        jordi:  192.168.0.58 
-#        areeba: 192.168.0.52
-#        carla:  192.168.0.56
-#        dani:   192.168.0.57
-#        unai:   192.168.1.67
-#        santi:  192.168.0.61
-#        oscar:  192.168.2.7 
-#        jeanp:  192.168.0.42
-#        henry:  192.168.2.8 
-#        victor: 192.168.2.1 
-#                     #192.168.1.44 
-#        pol:    192.168.0.44 
-#        man:    192.168.1.253
-#        edgar:  192.168.0.41 
-#        zain:   192.168.1.64 
-#                     #192.168.1.61 
-#        ariel:  192.168.2.9 
+        josep: 
+          ansible_host: 192.168.1.91 # josep
+        martha: 
+          ansible_host: 192.168.0.134 #martha
+        carlos: 
+          ansible_host: 192.168.1.90 # carlos
+        desconegut1: 
+          ansible_host: 192.168.1.84 
+        marc: 
+          ansible_host: 192.168.1.93 # marc
+        albert: 
+          ansible_host: 192.168.1.89 # albert
+        christopher: 
+          ansible_host: 192.168.1.81 #christopher
+        rodrigo: 
+          ansible_host: 192.168.1.94 # rodrigo
+        oriana: 
+          ansible_host: 192.168.1.96 # oriana
+        desconegut2: 
+          ansible_host: 192.168.0.135
+    a14:
+      hosts: 
+        pol:  
+          ansible_host: 192.168.0.58 
+        areeba: 
+          ansible_host: 192.168.0.52
+        carla:  
+          ansible_host: 192.168.0.56
+        dani:   
+          ansible_host: 192.168.0.57
+        unai:   
+          ansible_host: 192.168.1.67
+        santi:  
+          ansible_host: 192.168.0.61
+        oscar:  
+          ansible_host: 192.168.2.7 
+        jeanp:  
+          ansible_host: 192.168.0.42
+        henry:  
+          ansible_host: 192.168.2.8 
+        victor: 
+          ansible_host: 192.168.2.1 
+                     #192.168.1.44 
+        jordi:    
+          ansible_host: 192.168.0.44 
+        man:    
+          ansible_host: 192.168.1.253
+        edgar:  
+          ansible_host: 192.168.0.41 
+        zain:   
+          ansible_host: 192.168.1.64 
+                     #192.168.1.61 
+        ariel:  
+          ansible_host: 192.168.2.9 
