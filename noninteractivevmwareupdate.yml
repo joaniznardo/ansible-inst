@@ -1,0 +1,24 @@
+---
+- hosts: all
+  gather_facts: no
+  become: yes
+  tasks:
+  - name: copia el systemd
+    copy:  
+      src: files/vmware-modules-rebuild.service
+      dest: /etc/systemd/system
+
+  - name: just force systemd to reread configs (2.4 and above)
+    systemd: daemon_reload=yes
+
+  - name: habilita el servei
+    systemd:
+      name: vmware-modules-rebuild.service
+      enabled: yes
+      masked: no
+
+  - name: habilita el servei
+    systemd:
+      state: restarted
+      daemon_reload: yes
+      name: vmware-modules-rebuild.service
