@@ -25,7 +25,7 @@ all:
         rodrigo: 
           ansible_host: 192.168.1.94 # rodrigo
         oriana: 
-          ansible_host: 192.168.1.96 # oriana
+          ansible_host: 192.168.3.112 #oriana
         desconegut2: 
           ansible_host: 192.168.0.135
     a14:
