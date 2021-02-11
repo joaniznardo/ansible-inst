@@ -17,8 +17,8 @@
       enabled: yes
       masked: no
 
-  - name: habilita el servei
+  - name: inicia el servei
     systemd:
-      state: restarted
-      daemon_reload: yes
+      state: started
+      #daemon_reload: yes
       name: vmware-modules-rebuild.service

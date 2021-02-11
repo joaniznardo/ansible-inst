@@ -6,7 +6,7 @@ ConditionPathExists=!/dev/vmmon
 
 [Service]
 Type=oneshot
-ExecStart=vmware-modconfig --console --install-all
+ExecStart=/usr/bin/vmware-modconfig --console --install-all
 
 [Install]
 WantedBy=multi-user.target
