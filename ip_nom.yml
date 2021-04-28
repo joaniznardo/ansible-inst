@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: yes
+  tasks:
+    - name: simple llistat
+      debug:  
+        msg: System {{ inventory_hostname }} has ip {{ ansible_default_ipv4.address }}
